@@ -1,64 +1,146 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Blogsphere
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based Blog Platform that empowers writers, bloggers, and content creators to share their ideas with a global audience. With features like user authentication, category tagging, and social sharing, it provides a dynamic and engaging blogging experience.
 
-## About Laravel
+## Application Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Homepage.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Blog-Post.png" style="width: 48%; height: auto;">
+</div>
+<br>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Show-Blogpost.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Create-Post.png" style="width: 48%; height: auto;">
+</div>
+<br>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Admin-Dashboard.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/User-Dashboard.png" style="width: 48%; height: auto;">
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP >= 8.1
+- Composer
+- MySQL
 
-## Learning Laravel
+## Installation Steps
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone the repository:**
+```bash
+git clone https://github.com/muhammadaliyusuf/blog-sphere.git
+cd blog-sphere
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Install PHP dependencies:**
+```bash
+composer install
+```
 
-## Laravel Sponsors
+3. **Create environment file:**
+```bash
+cp .env.example .env
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+4. **Generate application key:**
+```bash
+php artisan key:generate
+```
 
-### Premium Partners
+5. **Copy the generated key:**
+   
+   - The key will be automatically added to your .env file
+   - If not added automatically, copy the generated key (it will look like: base64:xxxxxxxxx...)
+   - Open your .env file and paste the key in the APP_KEY field:
+     
+```
+APP_KEY=base64:your_generated_key_here
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+6. **Configure database connection in `.env` file:**
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=set_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
 
-## Contributing
+7. **Run database migrations:**
+```bash
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+8. **Run database seeders:**
+```bash
+php artisan db:seed
+```
 
-## Code of Conduct
+## Additional Setup
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Since the `/vendor` directory is not included in version control (as specified in `.gitignore`), make sure to:
 
-## Security Vulnerabilities
+1. Run `composer update` after cloning to install all required dependencies
+2. If you encounter any issues with dependencies, try:
+   - Clearing composer cache: `composer clear-cache`
+   - Removing `composer.lock` and running `composer install` again
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Usage
 
-## License
+1. Start the Laravel development server:
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Database Schema
+
+The database migrations will create the following structure:
+
+### Tables
+
+1. **users**
+   - Stores user information
+   - Fields:
+     - `id`: Unique identifier
+     - `name`: User's full name
+     - `username`: Unique username
+     - `email`: Unique email address
+     - `email_verified_at`: Timestamp when the email was verified (nullable)
+     - `password`: Hashed password
+     - `remember_token`: Token for authentication persistence
+     - `timestamps`: Created and updated timestamps
+
+2. **posts**
+   - Stores blog posts created by users
+   - Fields:
+     - `id`: Unique identifier
+     - `category_id`: Reference to the category of the post
+     - `user_id`: Reference to the author (user) of the post
+     - `title`: Title of the post
+     - `slug`: Unique identifier for the post URL
+     - `image`: Image associated with the post (nullable)
+     - `excerp`: Short excerpt or summary of the post
+     - `body`: Full content of the post
+     - `published_at`: Timestamp when the post was published (nullable)
+     - `timestamps`: Created and updated timestamps
+
+3. **categories**
+   - Stores different categories for blog posts
+   - Fields:
+     - `id`: Unique identifier
+     - `name`: Unique name of the category
+     - `slug`: Unique identifier for category URL
+     - `timestamps`: Created and updated timestamps
+
+### Relationships
+
+- Each **post** belongs to one **category** (`category_id` as foreign key)
+- Each **post** is authored by one **user** (`user_id` as foreign key)
+- Each **category** can have multiple **posts**
+- Each **user** can create multiple **posts**
+
+## Contact
+
+Muhammad Ali Yusuf - muhammadaliyusuff22@gmail.com
