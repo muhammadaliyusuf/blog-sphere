@@ -5,18 +5,18 @@ A web-based Blog Platform that empowers writers, bloggers, and content creators 
 ## Application Overview
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Homepage.png" style="width: 48%; height: auto;">
-  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Blog-Post.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/Homepage.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/Blog-Post.png" style="width: 48%; height: auto;">
 </div>
 <br>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Show-Blogpost.png" style="width: 48%; height: auto;">
-  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Create-Post.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/Show-Blogpost.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/Create-Post.png" style="width: 48%; height: auto;">
 </div>
 <br>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/Admin-Dashboard.png" style="width: 48%; height: auto;">
-  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/ApplicationOverview/User-Dashboard.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/Admin-Dashboard.png" style="width: 48%; height: auto;">
+  <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/User-Dashboard.png" style="width: 48%; height: auto;">
 </div>
 
 ## Prerequisites
