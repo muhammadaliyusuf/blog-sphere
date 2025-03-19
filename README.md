@@ -1,6 +1,6 @@
 # Blogsphere
 
-A web-based Blog Platform that empowers writers, bloggers, and content creators to share their ideas with a global audience. With features like user authentication, category tagging, and social sharing, it provides a dynamic and engaging blogging experience.
+A web-based Blog Platform that empowers writers, bloggers, and content creators to share their ideas with a global audience. With features like user authentication, and category tagging. it provides a dynamic and engaging blogging experience.
 
 ## Application Overview
 
