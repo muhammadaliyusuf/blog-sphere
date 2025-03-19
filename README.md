@@ -19,9 +19,20 @@ A web-based Blog Platform that empowers writers, bloggers, and content creators 
   <img src="https://github.com/muhammadaliyusuf/blog-sphere/blob/master/.ApplicationOverview/User-Dashboard.png" style="width: 48%; height: auto;">
 </div>
 
+## Features
+
+- User authentication and authorization (admin and regular users)
+- Create, read, update, and delete blog posts
+- Category management for organizing content
+- Rich text editor for content creation
+- Image uploads for blog posts
+- User dashboard for managing personal content
+- Admin dashboard for site management
+- Responsive design for mobile and desktop viewing
+
 ## Prerequisites
 
-- PHP >= 8.1
+- PHP >= 7.3
 - Composer
 - MySQL
 
@@ -78,6 +89,11 @@ php artisan migrate
 php artisan db:seed
 ```
 
+9. **Set up storage link for file uploads:**
+```bash
+php artisan storage:link
+```
+
 ## Additional Setup
 
 Since the `/vendor` directory is not included in version control (as specified in `.gitignore`), make sure to:
@@ -92,6 +108,14 @@ Since the `/vendor` directory is not included in version control (as specified i
 1. Start the Laravel development server:
 ```bash
 php artisan serve
+```
+
+2. Access the application in your browser at `http://localhost:8000`
+
+3. Login with the default admin credentials:
+```
+Username: admin
+Password: admin
 ```
 
 ## Database Schema
@@ -140,6 +164,26 @@ The database migrations will create the following structure:
 - Each **post** is authored by one **user** (`user_id` as foreign key)
 - Each **category** can have multiple **posts**
 - Each **user** can create multiple **posts**
+
+## Troubleshooting
+
+- **Issues with file uploads**:
+  - Check storage directory permissions
+  - Verify symlink creation with `php artisan storage:link`
+  - Ensure PHP configuration allows for the file size you're uploading
+
+- **Database connection errors**:
+  - Verify credentials in `.env` file
+  - Check if MySQL server is running
+  - Ensure database exists before migration
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## Contact
 
