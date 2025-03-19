@@ -20,10 +20,11 @@ class DatabaseSeeder extends Seeder
         Post::factory(20)->create();
 
         User::create([
-            'name' => 'Ali Yusuf',
-            'username' => 'aliyusuf',
-            'email' => 'aliyusuf@gmail.com',
-            'password' => bcrypt('12345')
+            'name' => 'Admin',
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin'),
+            'is_admin' => true
         ]);
 
         Category::create([
